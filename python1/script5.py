@@ -6,7 +6,9 @@ import math
 
 number = int(sys.argv[1])
 
-if number > 0:
+if number == 50:
+	print('number equal to 50')
+elif number > 0:
 	if number < 50:
 		print('positive and less than 50')
 		if number%2 == 0:
