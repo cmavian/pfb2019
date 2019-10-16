@@ -1,0 +1,8 @@
+go to home: cd ~
+
+command: vi .vimrc
+
+write into the file: syntax on
+										set number
+										set tabstop=2
+and then do command: source .vimrc

@@ -2,12 +2,16 @@
 
 
 import sys 
+import math
 
+variable1 = int(sys.argv[1]) 
+#this script doesn't work with strings, python recognizes every input as string and I am coverting it to numbers with int(), but only for numbers as input. 
+print(type(variable1))
 
-variable1 = ''
-
-if variable1 is True:
-	print('True')
+if bool(variable1) == True:
+	message = 'True'
+	print(message)
 else:
-	print('not True')
+	message = 'False'	
+	print(message)
 
