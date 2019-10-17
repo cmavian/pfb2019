@@ -74,9 +74,44 @@ print('{:.2f}'.format(GC_content), "it's my GC content in DNA")
 #substring 
 
 
-#print(test_dna[3:6])
+# print(test_dna[3:6]) # gives me TGG so it takes from position 4, I need to specify 99-199
 
-#sub_DNA = DNA[101:200]
+sub_DNA = DNA[99:199]
+
+print(len(sub_DNA))
+
+print(sub_DNA.count('G'))
+
+sub_dna = dna[99:199]
+
+print(len(sub_dna))
+
+print(sub_dna.count('G')+sub_dna.count('g'))
+
+# complemente and reverse complement and 
+reverse_sub_DNA = sub_DNA[::-1]
+
+# complement 
+
+complement_DNA_Atot = sub_DNA.replace('A', 't')
+complement_DNA_Ttoa = complement_DNA_Atot.replace('T', 'a')
+complement_DNA_Gtoc = complement_DNA_Ttoa.replace('G', 'c')
+complement_DNA_Ctog = complement_DNA_Gtoc.replace('C', 'g')
+complement_DNA = complement_DNA_Ctog.upper()
+
+# reverse complement
+reverse_complement_DNA_Atot = reverse_sub_DNA.replace('A', 't')
+reverse_complement_DNA_Ttoa = reverse_complement_DNA_Atot.replace('T', 'a')
+reverse_complement_DNA_Gtoc = reverse_complement_DNA_Ttoa.replace('G', 'c')
+reverse_complement_DNA_Ctog = reverse_complement_DNA_Gtoc.replace('C', 'g')
+reverse_complement_DNA = reverse_complement_DNA_Ctog.upper()
+
+print("Original   Sequence 5' {:>110}".format(sub_DNA) + " 3'")
+print("Complement Sequence 5' {:>110}".format(complement_DNA) + " 3'")
+print("Reverse    Sequence 5' {:>110}".format(reverse_sub_DNA) + " 3'")
+print("Reverse  Complement 5' {:>110}".format(reverse_complement_DNA) + " 3'")
+
+
 
 
 
