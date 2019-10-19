@@ -112,6 +112,13 @@ print("Reverse    Sequence 5' {:>110}".format(reverse_sub_DNA) + " 3'")
 print("Reverse  Complement 5' {:>110}".format(reverse_complement_DNA) + " 3'")
 
 
+# EcoRI
+
+ecori = 'GAATTC'
+ecori_start = DNA.find(ecori)
+ecori_stop = ecori_start + len(ecori)
+
+print('EcoRI startPos:',ecori_start, 'endPos:', ecori_stop)
 
 
 
