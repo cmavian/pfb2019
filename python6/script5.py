@@ -16,7 +16,9 @@ with open(fasta, 'r') as read_fasta:
 			key = re.search(r'^>(\S+) (.\S.+)', line) # fasta_ID = '>'+key
 			geneID = key.group(1)
 			fasta_dic[geneID] = ''
+			print(geneID)
 		else: # concatanate each line and assign to value
 			value += line 
 			fasta_dic[geneID] = value
-print(fasta_dic)
+
+print(len(fasta_dic))
